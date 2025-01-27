@@ -3,6 +3,7 @@
 # North loop Provisions - Donut shop Management stytem
 # Your first python program for module 2
 
+# import statement to get time we this program runs.
 import time
 
 def welcome_message():
@@ -14,6 +15,7 @@ def welcome_message():
     print()
     print("....................................................")
 
+# Function that display shows menu.
 def show_menu():
     """Display our current donut menu."""
     menu = {
@@ -84,6 +86,7 @@ morning_sales.append({
     'time': '7:30 AM'
 })
 
+# Add second morning donut sold.
 morning_sales.append({
     'item': 'Swedish Cardamom',
     'quantity': 1,
@@ -94,6 +97,7 @@ morning_sales.append({
 # Display our current menu - using a for loop 
 print("     Todays Morning Menu: ")
 print()
+# for loop to display menu 
 for category, items in donut_menu.items():
     print("    ", category + ":")
     for item in items:
@@ -108,6 +112,7 @@ print("......................................................")
 print()
 print("    Morning sale list is here: ")
 print()
+# for loop to display morning sell for each sold.
 for sale in morning_sales:
     for item, value in sale.items():
         if type(value) == list: # or if isinstance(value, list):
@@ -120,9 +125,10 @@ for sale in morning_sales:
     total_quantity += sale['quantity']
     print() 
 
+# make user interface more readable.
 print("......................................................")
 print()
-print(f"Total quantity sold: {total_quantity}")
+print(f"Total quantity sold: {total_quantity}") # display total sold
 print()
 print("......................................................")
     
